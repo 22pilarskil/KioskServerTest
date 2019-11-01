@@ -1,0 +1,12 @@
+<p1>HI</p1>
+<script>
+	var chatSocket = new WebSocket(
+        'ws://' + window.location.host +
+        '/v1/guard/live');
+	function send(){
+		chatSocket.send(JSON.stringify({
+	            'message': "message"
+	        }));
+	}
+</script>
+<button onclick="send()">Click</button>
